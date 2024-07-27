@@ -1,0 +1,52 @@
+thead{
+   background: black;
+   color: white;
+}
+
+.header-text{
+   color: black;
+   font-size: 48px;
+}
+
+table{
+   border: black 1px solid;
+}
+
+input {
+   padding: 5px;
+   margin: 5px;
+}
+
+td{
+   border: black 1px solid;
+}
+
+#filter{
+   background: #b8f0b8;
+   border: 1px #b8f0b8 solid;
+   border-radius: 2px;
+}
+
+#filter:hover{
+   background: #96b389;
+}
+
+#clear{
+   background: #b8f0b8;
+   border: 1px #b8f0b8 solid;
+   border-radius: 2px;
+}
+
+#clear:hover{
+   background: #96b389;
+}
+
+#search{
+   background: #b8f0b8;
+   border: 1px #b8f0b8 solid;
+   border-radius: 2px;
+}
+
+#search:hover{
+   background: #96b389;
+}
