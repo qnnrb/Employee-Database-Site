@@ -1,0 +1,56 @@
+
+	<div class="text-header">
+		<h1>Company Database</h1>
+	</div>
+	<div class="text-subheader">
+		<h2>Current Employees</h2>
+	</div>
+	<div class="first-name">
+        {{#if name}}
+		<h3>Showing results for {{name}}</h3>
+	{{/if}}
+	</div>
+	<div class="project-info">
+	{{#if projectInfo}}
+		<h3>Project {{Pnumber}}: {{Pname}} located in {{Plocation}}</h3>
+	{{/if}}
+	</div>
+
+	<table>
+		<thead>
+		   <th>First Name</th>
+		   <th>Last Name</th>
+		   <th>Salary</th>
+		   <th>Dno</th>
+		</thead>
+		<tbody>
+		   {{#each employee}}
+		   <tr>
+		      <td>{{this.Fname}}</td>
+		      <td>{{this.Lname}}</td>
+		      <td>{{this.Salary}}</td>
+		      <td>{{this.Dno}}</td>
+		   </tr>
+                   {{/each}}
+		</tbody>
+	</table>
+
+	<form id="filter_employee" action='' method=''>
+		<label> Filter by project </label>
+		<select id='project_filter' name="project">
+		   {{#each project}}
+		   <option value="{{Pnumber}}">{{Pname}}</option>
+                   {{/each}}
+		</select><br>
+		<input id="filter" type="button" value="Filter" onclick="filterEmployeeByProject()">
+	</form>
+	<form id="clear_filter" action="/employee">
+		<button id="clear" type="submit">Clear Filter</button>
+	</form>
+
+	<form id="search_employee" action='' method=''>
+		<label> Search employees for first name starting with:</label>
+		<input id="first_name_search_string" type="text" name="first_name_search_string" value=''>
+		<input id="search" type="button" value="Search" onclick="searchEmployeeByFirstName()">
+	</form>
+
